@@ -864,3 +864,8 @@ nav a:hover::before {
 /* .project-link h2:hover {
   color: #0099e5;
 } */
+
+/* paragraphs in ABOUT ME */
+.about_me p {
+  font-size: 1rem;
+}
