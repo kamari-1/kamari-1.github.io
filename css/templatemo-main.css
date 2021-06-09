@@ -328,14 +328,14 @@ nav a:hover::before {
   padding-top: 13%;
 }
 
-.first-content .author-image img {
+/* .first-content .author-image img {
   margin-top: 15px;
   border-radius: 30px;
   max-width: 100%;
   overflow: hidden;
   float: left;
   margin-right: 35px;
-}
+} */
 
 .first-content h2 {
   font-size: 36px;
@@ -343,11 +343,12 @@ nav a:hover::before {
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.5px;
-  border-bottom: 2px solid #fff;
+  /* border-bottom: 2px solid #fff; */
   display: inline-block;
   padding-bottom: 10px;
   margin-bottom: 20px;
   margin-top: 0px;
+  width: max-content;
 }
 
 .first-content p {
@@ -365,12 +366,12 @@ nav a:hover::before {
   font-weight: 600;
 }
 
-.first-content .main-btn {
+.main-btn {
   display: inline-block;
   margin-right: 15px;
 }
 
-.first-content .main-btn a {
+.main-btn a {
   display: inline-block;
   border: 2px solid #fff;
   padding: 8px 15px;
@@ -383,11 +384,11 @@ nav a:hover::before {
   transition: all 0.5s;
 }
 
-.first-content .fb-btn {
+.fb-btn {
   display: inline-block;
 }
 
-.first-content .fb-btn a {
+.fb-btn a {
   display: inline-block;
   background-color: #fff;
   border: 2px solid #fff;
@@ -395,12 +396,12 @@ nav a:hover::before {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #232323;
-  text-decoration: none;
+  color: #232323 !important;
+  text-decoration: none !important;
   transition: all 0.5s;
 }
 
-.first-content .fb-btn a:hover {
+.fb-btn a:hover {
   color: #fff;
   background-color: transparent;
 }
@@ -562,6 +563,8 @@ nav a:hover::before {
 
 .fourth-content .item .thumb {
   position: relative;
+  height: 230px;
+  overflow: hidden;
 }
 
 .fourth-content .item .hover-effect {
@@ -868,4 +871,54 @@ nav a:hover::before {
 /* paragraphs in ABOUT ME */
 .about_me p {
   font-size: 1rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.contact-btn a {
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 8px 15px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* Typewriter effect */
+
+.typewriter h2 {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-right-color: white;
+  }
 }
