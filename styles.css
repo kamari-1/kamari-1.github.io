@@ -1,0 +1,39 @@
+/* https://coolors.co/331832-d81e5b-b87d4b-c6d8d3-efb0a1 */
+@import "scss/main.css";
+
+/****************PROJECTS****************/
+
+/***************MEDIA QUERY**************/
+
+@media screen and (max-width: 550px) {
+  nav {
+    display: block;
+    justify-content: center;
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2.5vw;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .welcome {
+    text-align: center;
+  }
+
+  .project-tile {
+    height: 35vh;
+    width: 30vw;
+  }
+
+  .project-desc {
+    font-size: 2vw;
+  }
+
+  .links a {
+    font-size: 2rem;
+    padding: 0.6rem;
+  }
+}

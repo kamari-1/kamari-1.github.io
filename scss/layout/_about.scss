@@ -1,0 +1,72 @@
+.about {
+  padding: 2rem;
+  padding-top: calc(3rem + 40px);
+  min-height: 100vh;
+  font-size: 1.2rem;
+  background: $bg-about;
+  overflow-x: hidden;
+
+  &-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: auto;
+
+    .about-text {
+      padding-right: 3rem;
+      line-height: 2;
+    }
+
+    .about-technologies {
+      h3 {
+        text-decoration: underline;
+      }
+      .tech-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        font-size: 2.5rem;
+
+        h2 {
+          padding: 0.7rem;
+        }
+
+        .fa-html5:hover {
+          color: #e34f26;
+        }
+        .fa-js:hover {
+          color: #f7df1e;
+        }
+        .fa-sass:hover {
+          color: #c69;
+        }
+        .fa-css3:hover {
+          color: #0099e5;
+        }
+        .fa-react:hover {
+          color: #00d8ff;
+        }
+      }
+    }
+  }
+}
+
+// ----- Media Query -----
+@media screen and (max-width: 768px) {
+  /* Styles */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+
+    .about-text {
+      padding-right: 0;
+    }
+
+    .about-technologies {
+      margin-top: 3rem;
+      .tech-list {
+        font-size: 2rem;
+      }
+    }
+  }
+}

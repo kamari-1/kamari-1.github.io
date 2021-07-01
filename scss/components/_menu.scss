@@ -1,0 +1,56 @@
+// Animation --------------------------------
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+// ------------------------------------------
+
+nav {
+  .menu-bars,
+  .menu-close {
+    display: none;
+    color: white;
+    font-size: 2rem;
+    height: 2rem;
+    z-index: 100;
+    top: 1rem;
+    right: 0.7rem;
+  }
+}
+
+/* Mobile (landscape) ----------- */
+@media screen and (max-width: 580px) {
+  .nav {
+    .nav-ul {
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      top: 2.7rem;
+      left: 0;
+      right: 0;
+      background: $purple;
+      animation: growDown 300ms ease-in-out forwards;
+
+      li {
+        margin: 0.5rem auto;
+      }
+    }
+
+    // Utility Show/Hide
+    .show {
+      display: block;
+    }
+    .hide {
+      display: none;
+    }
+  }
+}

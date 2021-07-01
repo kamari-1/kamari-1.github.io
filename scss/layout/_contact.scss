@@ -1,0 +1,40 @@
+/****************CONTACT****************/
+.contact {
+  align-items: center;
+  background-color: $purple;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.contact-desc h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact-desc p {
+  font-style: italic;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+
+  &-icon {
+    margin: 0 1rem;
+    font-size: 2.5rem;
+
+    a {
+      color: white;
+
+      &:hover {
+        color: $brown;
+        transition: 0.3s ease;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

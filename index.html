@@ -1,537 +1,404 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="UTF-8" />
     <title>Clement Oboh</title>
-    <!-- 
-Moonlight Template 
-https://templatemo.com/tm-512-moonlight
--->
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-
-    <!-- CSS only -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="css/fontAwesome.css" />
-    <link rel="stylesheet" href="css/light-box.css" />
-    <link rel="stylesheet" href="css/templatemo-main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"
-      rel="stylesheet"
-    />
-
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
   </head>
-
   <body>
-    <div class="sequence">
-      <div class="seq-preloader">
-        <svg
-          width="39"
-          height="16"
-          viewBox="0 0 39 16"
-          xmlns="http://www.w3.org/2000/svg"
-          class="seq-preload-indicator"
-        >
-          <g fill="#F96D38">
-            <path
-              class="seq-preload-circle seq-preload-circle-1"
-              d="M3.999 12.012c2.209 0 3.999-1.791 3.999-3.999s-1.79-3.999-3.999-3.999-3.999 1.791-3.999 3.999 1.79 3.999 3.999 3.999z"
-            />
-            <path
-              class="seq-preload-circle seq-preload-circle-2"
-              d="M15.996 13.468c3.018 0 5.465-2.447 5.465-5.466 0-3.018-2.447-5.465-5.465-5.465-3.019 0-5.466 2.447-5.466 5.465 0 3.019 2.447 5.466 5.466 5.466z"
-            />
-            <path
-              class="seq-preload-circle seq-preload-circle-3"
-              d="M31.322 15.334c4.049 0 7.332-3.282 7.332-7.332 0-4.049-3.282-7.332-7.332-7.332s-7.332 3.283-7.332 7.332c0 4.05 3.283 7.332 7.332 7.332z"
-            />
-          </g>
-        </svg>
+    <!-- NAV -->
+    <nav id="navbar" class="nav">
+      <div class="logo">
+        <a href="#particles-js" class="nav-link">&lt CO /&gt</a>
       </div>
-    </div>
-
-    <nav>
-      <!-- <div class="logo">
-        <img src="img/logo.png" alt="" />
-      </div> -->
-      <!-- <div class="mini-logo">
-        <img src="img/mini_logo.png" alt="" />
-      </div> -->
-      <ul>
+      <ul class="nav-ul" id="nav-ul">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
         <li>
-          <a href="#1"><i class="fa fa-home"></i> <em>CO</em></a>
+          <a
+            id="nav-resume"
+            class="welcome-links-resume"
+            href="https://resume.io/r/UgGJOxLC9"
+            target="_blank"
+            ><div class="btn-primary">Resume</div></a
+          >
         </li>
-        <li>
-          <a href="#2"><i class="fa fa-user"></i> <em>About Me</em></a>
-        </li>
-        <!-- <li>
-          <a href="#3"><i class="fa fa-pencil"></i> <em>Entries</em></a>
-        </li> -->
-        <li>
-          <a href="#3"><i class="fa fa-image"></i> <em>Portfolio</em></a>
-        </li>
-        <!-- <li>
-          <a href="#5"><i class="fa fa-envelope"></i> <em>Contact</em></a>
-        </li> -->
       </ul>
+
+      <!-- Mobile Menu -->
+      <i
+        id="menu-bars"
+        class="fa fa-bars menu-bars show"
+        aria-hidden="true"
+      ></i>
+      <i
+        id="menu-close"
+        class="fa fa-times menu-close hide"
+        aria-hidden="true"
+      ></i>
     </nav>
 
-    <div class="slides">
-      <div class="slide" id="1">
-        <div class="content first-content">
-          <div class="container-fluid">
-            <!-- <div class="col-md-3">
-              <div class="author-image">
-                <img src="img/author_image.png" alt="Author Image" />
-              </div>
-            </div> -->
-            <div class="col-md-9 typewriter">
-              <h2>Hi, I'm Clement</h2>
-              <p>&lt;<span class="text-info">Software Developer</span> /&gt;</p>
-              <p>
-                This website features a collection of my personal projects,
-                mostly challenges found on the web. I've recently completed my
-                degree in computer science.
+    <!-- WELCOME -->
+    <div id="particles-js">
+      <section id="welcome-section" class="welcome">
+        <h1
+          data-sal="slide-up"
+          data-sal-duration="2000"
+          data-sal-delay="400"
+          data-sal-easing="ease-out-back"
+        >
+          Hi! I'm Clement
+        </h1>
+        <p class="welcome-desc">&lt;Web & Software developer /&gt;</p>
+        <div class="welcome-links">
+          <div
+            class="icon"
+            data-sal="slide-right"
+            data-sal-duration="2000"
+            data-sal-delay="900"
+            data-sal-easing="ease-out-bounce"
+          >
+            <a href="https://github.com/kamari-1" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+          <div
+            class="icon"
+            data-sal="slide-left"
+            data-sal-duration="2000"
+            data-sal-delay="900"
+            data-sal-easing="ease-out-bounce"
+          >
+            <a
+              href="https://www.linkedin.com/in/clement-oboh-0b607a81"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="page-title">
+        <h1>About</h1>
+      </div>
+
+      <div class="about-container">
+        <div
+          class="about-text"
+          data-sal="fade"
+          data-sal-duration="2000"
+          data-sal-delay="200"
+          data-sal-easing="ease-out-back"
+        >
+          <p>
+            My name is
+            <strong>Clement Oboh</strong>. I'm a Software developer currently
+            based in Cyprus ☀️. I describe myself as a passionate developer who
+            loves creating, coding, and everything tech ❤️.
+          </p>
+          <br />
+          <p>
+            I like to take on programming/coding challenges and projects. This
+            helps me to learn a ton of new stuff, grow as a developer and
+            support other open source projects.
+          </p>
+          <br />
+          <p>
+            In my free time you can find me shedding on the bass 🎸, at the gym
+            🏋️‍♂️ or at tech meetups.
+          </p>
+        </div>
+        <div
+          class="about-technologies"
+          data-sal="slide-left"
+          data-sal-duration="2000"
+          data-sal-delay="500"
+          data-sal-easing="ease-out-back"
+        >
+          <h3>Technologies I use</h3>
+          <br />
+          <div class="tech-list">
+            <h2><i class="fab fa-html5" title="HTML 5"></i></h2>
+            <h2><i class="fab fa-css3" title="CSS 3"></i></h2>
+            <h2><i class="fab fa-sass" title="SASS"></i></h2>
+            <h2><i class="fab fa-js" title="JAVASCRIPT"></i></h2>
+            <h2><i class="fab fa-react" title="REACT JS"></i></h2>
+            <h2><i class="fab fa-git" title="GIT"></i></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+      <div class="projects_title page-title">
+        <h1>Some of my work</h1>
+      </div>
+      <div class="projects_cards">
+        <!-- CARD -->
+        <div class="card">
+          <a
+            href="https://kamari-1.github.io/frontend-mentor/crowdfunding-product-page-main/index.html"
+          >
+            <div class="card-img">
+              <img src="./assets/images/crowdfunding.jpg" alt="crowdfund" />
+            </div>
+            <div class="card-desc"><h3>Crowdfund</h3></div>
+          </a>
+
+          <!-- Card overlay -->
+          <div class="card-overlay">
+            <div class="card-overlay-desc">
+              <h2>Crowdfund</h2>
+              <p class="card-overlay-desc-text">
+                Crowdfunding product page. As visitors make pledges, changes are
+                tracked.
               </p>
-              <div class="main-btn">
-                <a href="https://github.com/kamari-1" target="_blank">Github</a>
+              <div class="tech-used">
+                <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
+                <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
+                <h4>
+                  <i class="fab fa-js" title="JAVASCRIPT"></i>
+                </h4>
               </div>
-              <div class="main-btn">
-                <a
-                  href="https://www.linkedin.com/in/clement-oboh-0b607a81/"
-                  target="_blank"
-                  >LinkedIn</a
-                >
-              </div>
-              <div class="fb-btn">
-                <a rel="nofollow" href="./assets/Resume_.pdf" target="_blank"
-                  >Resume</a
-                >
-              </div>
+            </div>
+            <div class="card-overlay-icons">
+              <a
+                href="https://kamari-1.github.io/frontend-mentor/crowdfunding-product-page-main/index.html"
+                target="_blank"
+              >
+                <i class="fa fa-external-link-alt icon" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://github.com/kamari-1/frontend-mentor/tree/master/crowdfunding-product-page-main"
+                target="_blank"
+              >
+                <i class="fab fa-github icon"></i>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="slide" id="2">
-        <div class="content second-content">
-          <div class="container-fluid">
-            <div class="col">
-              <div class="left-content about_me">
-                <h2>About</h2>
-                <p>
-                  My name is
-                  <strong>Clement Oboh</strong>. I'm a Software developer
-                  currently based in Cyprus ☀️. I describe myself as a
-                  passionate developer who loves creating, coding, and
-                  everything tech ❤️.
-                </p>
-                <p>
-                  I like to take on programming/coding challenges and projects.
-                  This helps me to learn a ton of new stuff, grow as a developer
-                  and support other open source projects.
-                </p>
-                <p>
-                  In my free time you can find me shedding on the bass 🎸, at
-                  the gym 🏋️‍♂️ or on tech meetups.
-                </p>
-                <h3 class="text-light">Technologies I know:</h3>
-                <br />
-                <div class="my-list">
-                  <h2><i class="fab fa-html5" title="HTML 5"></i></h2>
-                  <h2><i class="fab fa-css3" title="CSS 3"></i></h2>
-                  <h2><i class="fab fa-js" title="JAVASCRIPT"></i></h2>
-                  <h2><i class="fab fa-react" title="REACT JS"></i></h2>
-                  <h2><i class="fab fa-git" title="GIT"></i></h2>
-                </div>
-                <br />
-                <div class="main-btn">
-                <a href="https://github.com/kamari-1" target="_blank">Github</a>
+
+        <!-- CARD -->
+        <div class="card">
+          <a
+            href="https://kamari-1.github.io/frontend-mentor/interactive-pricing-component-main/index.html"
+          >
+            <div class="card-img">
+              <img
+                src="./assets/images/pricing_component.jpg"
+                alt="pricing component"
+              />
+            </div>
+            <div class="card-desc"><h3>Interactive Pricing component</h3></div>
+          </a>
+
+          <!-- Card overlay -->
+          <div class="card-overlay">
+            <div class="card-overlay-desc">
+              <h2>Interactive Pricing component</h2>
+              <p class="card-overlay-desc-text">
+                An interactive pricing component complete with custom range
+                input slider and pricing toggle.
+              </p>
+              <div class="tech-used">
+                <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
+                <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
+                <h4>
+                  <i class="fab fa-js" title="JAVASCRIPT"></i>
+                </h4>
               </div>
-              <div class="main-btn">
-                <a
-                  href="https://www.linkedin.com/in/clement-oboh-0b607a81/"
-                  target="_blank"
-                  >LinkedIn</a
-                >
-              </div>
-              <div class="fb-btn">
-                <a rel="nofollow" href="./assets/Resume_.pdf" target="_blank"
-                  >Resume</a
-                >
-              </div>
-              </div>
+            </div>
+            <div class="card-overlay-icons">
+              <a
+                href="https://kamari-1.github.io/frontend-mentor/interactive-pricing-component-main/index.html"
+              >
+                <i class="fa fa-external-link-alt icon" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://github.com/kamari-1/frontend-mentor/tree/master/interactive-pricing-component-main"
+                target="_blank"
+              >
+                <i class="fab fa-github icon"></i>
+              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- ----- Slide 3 ----- -->
-      <div class="slide" id="3">
-        <div class="content fourth-content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 images">
-                <div class="item">
-                  <div class="thumb">
-                    <a
-                      href="img/crowdfunding.jpg"
-                      target="_blank"
-                      data-lightbox="image-1"
-                    >
-                      <div class="hover-effect">
-                        <div class="hover-content">
-                          <a
-                            href="https://kamari-1.github.io/frontend-mentor/crowdfunding-product-page-main/index.html"
-                            target="_blank"
-                            class="project-link"
-                          >
-                            <h2>Crowdfunding page</h2>
-                          </a>
-                          <p>
-                            Crowdfunding product page. As visitors make pledges,
-                            changes are tracked.
-                          </p>
-                          <br />
-                          <div class="my-list-2">
-                            <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
-                            <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
-                            <h4>
-                              <i class="fab fa-js" title="JAVASCRIPT"></i>
-                            </h4>
-                            <!-- <h2><i class="fab fa-react" title="REACT JS"></i></h2> -->
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div class="image">
-                      <img src="img/crowdfunding.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <a href="img/pricing_component.jpg" data-lightbox="image-1"
-                      ><div class="hover-effect">
-                        <div class="hover-content">
-                          <a
-                            href="https://kamari-1.github.io/frontend-mentor/interactive-pricing-component-main/index.html"
-                            target="_blank"
-                            class="project-link"
-                            ><h2>Interactive Pricing Component</h2></a
-                          >
-                          <p>
-                            An interactive pricing component complete with
-                            custom range input slider and pricing toggle.
-                          </p>
-                          <br />
-                          <div class="my-list-2">
-                            <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
-                            <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
-                            <h4>
-                              <i class="fab fa-js" title="JAVASCRIPT"></i>
-                            </h4>
-                            <!-- <h2><i class="fab fa-react" title="REACT JS"></i></h2> -->
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div class="image">
-                      <img src="img/pricing_component.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <!-- CARD -->
+        <div class="card">
+          <a href="#">
+            <div class="card-img">
+              <img src="./assets/images/todo_app.png" alt="todo app" />
+            </div>
+            <div class="card-desc"><h3>Basic Todo App</h3></div>
+          </a>
 
-              <!--  -->
-              <div class="col-md-6 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <a href="img/todo_app.png" data-lightbox="image-1"
-                      ><div class="hover-effect">
-                        <div class="hover-content">
-                          <a
-                            href="https://todo-kamari.netlify.app/"
-                            target="_blank"
-                            class="project-link"
-                            ><h2>Basic Todo App</h2></a
-                          >
-                          <p>Just a basic todo app.</p>
-                          <br />
-                          <div class="my-list-2">
-                            <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
-                            <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
-                            <h4>
-                              <i class="fab fa-js" title="JAVASCRIPT"></i>
-                            </h4>
-                            <!-- <h2><i class="fab fa-react" title="REACT JS"></i></h2> -->
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div class="image">
-                      <img src="img/todo_app.png" />
-                    </div>
-                  </div>
-                </div>
+          <!-- Card overlay -->
+          <div class="card-overlay">
+            <div class="card-overlay-desc">
+              <h2>Basic Todo App</h2>
+              <p class="card-overlay-desc-text">
+                Just a basic todo app with local storage at least. 😂
+              </p>
+              <div class="tech-used">
+                <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
+                <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
+                <h4>
+                  <i class="fab fa-js" title="JAVASCRIPT"></i>
+                </h4>
               </div>
-
-              <!--  -->
-              <div class="col-md-6 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <a href="img/smd.jpg" data-lightbox="image-1"
-                      ><div class="hover-effect">
-                        <div class="hover-content">
-                          <a
-                            href="https://kamari-1.github.io/frontend-mentor/social-media-dashboard-with-theme-switcher-master/index.html"
-                            target="_blank"
-                            class="project-link"
-                          >
-                            <h2>Social Media Dashboard</h2>
-                          </a>
-                          <p>Social media dashboard with theme switcher.</p>
-                          <br />
-                          <div class="my-list-2">
-                            <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
-                            <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
-                            <h4>
-                              <i class="fab fa-js" title="JAVASCRIPT"></i>
-                            </h4>
-                            <!-- <h2><i class="fab fa-react" title="REACT JS"></i></h2> -->
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div class="image">
-                      <img src="img/smd.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- 5 -->
-              <!-- <div class="col-md-6 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <a href="img/fifth_big_item.jpg" data-lightbox="image-1"
-                      ><div class="hover-effect">
-                        <div class="hover-content">
-                          <h2>Fifth Item</h2>
-                          <p>
-                            Donec commodo, ex nec rutrum venenatis, nisi nisl
-                            malesuada magna.
-                          </p>
-                          <br />
-                          <div class="my-list-2">
-                            <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
-                            <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
-                            <h4>
-                              <i class="fab fa-js" title="JAVASCRIPT"></i>
-                            </h4>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div class="image">
-                      <img src="img/fifth_item.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              <!-- 6 -->
-              <!-- <div class="col-md-6 col-sm-6">
-                <div class="item">
-                  <div class="thumb">
-                    <a href="img/sixth_big_item.jpg" data-lightbox="image-1"
-                      ><div class="hover-effect">
-                        <div class="hover-content">
-                          <h2>Sixth Item</h2>
-                          <p>
-                            Maecenas dapibus neque sed nisl consectetur, id
-                            semper nisi egestas.
-                          </p>
-                          <br />
-                          <div class="my-list-2">
-                            <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
-                            <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
-                            <h4>
-                              <i class="fab fa-js" title="JAVASCRIPT"></i>
-                            </h4>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div class="image">
-                      <img src="img/sixth_item.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              <!--  -->
+            </div>
+            <div class="card-overlay-icons">
+              <a href="#">
+                <i class="fa fa-external-link-alt icon" aria-hidden="true"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fab fa-github icon"></i>
+              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- ----- Slide 5 ----- -->
-      <!-- <div class="slide" id="5">
-        <div class="content fifth-content">
-          <div class="container-fluid">
-            <!-- <div class="col"> -->
-              <div class="row">
-                <div class="col-me-4 contact-btn">
-                  <a
-                    href="https://www.linkedin.com/in/clement-oboh-0b607a81/"
-                    target="_blank"
-                    ><i class="fab fa-linkedin"></i></a
-                  >
-                </div>
-
-                <div class="col-me-4 contact-btn">
-                  <a
-                    href="https://twitter.com/ka_ma_ri_1"
-                    target="_blank"
-                    ><i class="fab fa-twitter"></i></a
-                  >
-                </div>
-              </div> -->
-              <!-- <form id="contact" action="mailto:klementoboh@yahoo.com" enctype=”multipart/form-data” method="post">
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input
-                        name="name"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        placeholder="Your name..."
-                        required=""
-                      />
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input
-                        name="email"
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="Your email..."
-                        required=""
-                      />
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <input
-                        name="subject"
-                        type="text"
-                        class="form-control"
-                        id="subject"
-                        placeholder="Subject..."
-                        required=""
-                      />
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <textarea
-                        name="message"
-                        rows="6"
-                        class="form-control"
-                        id="message"
-                        placeholder="Your message..."
-                        required=""
-                      ></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="btn">
-                        Send Now
-                      </button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form> -->
-            <!-- </div>
+        <!-- CARD -->
+        <div class="card">
+          <a href="#">
+            <div class="card-img">
+              <img src="./assets/images/my-portfolio.png" alt="my portfolio" />
+            </div>
+            <div class="card-desc"><h3>My Portfolio</h3></div>
+          </a>
+          <!-- Card overlay -->
+          <div class="card-overlay">
+            <div class="card-overlay-desc">
+              <h2>My Portfolio</h2>
+              <p class="card-overlay-desc-text">
+                This portfolio page. Animations created by utilising css
+                keyframes, PARTICLES.JS and SAL.JS.
+              </p>
+              <div class="tech-used">
+                <h4><i class="fab fa-html5" title="HTML 5"></i></h4>
+                <h4><i class="fab fa-css3" title="CSS 3"></i></h4>
+                <h4>
+                  <i class="fab fa-js" title="JAVASCRIPT"></i>
+                </h4>
+              </div>
+            </div>
+            <div class="card-overlay-icons">
+              <a href="http://kamari-1.github.io/" target="_blank">
+                <i class="fa fa-external-link-alt icon" aria-hidden="true"></i>
+              </a>
+              <a href="#" target="_blank">
+                <i class="fab fa-github icon"></i>
+              </a>
+            </div>
           </div>
         </div>
+        <!--  -->
       </div>
-    </div> -->
+    </section>
 
-    <!-- -------------------------------- -->
-    <!-- -------------------------------- -->
-    <!-- -------------------------------- -->
+    <!-- SOCIAL MEDIA -->
+    <section id="contact" class="contact">
+      <div class="contact-desc">
+        <h1
+          data-sal="slide-down"
+          data-sal-duration="1000"
+          data-sal-delay="100"
+          data-sal-easing="ease-out-bounce"
+        >
+          Let's work together...
+        </h1>
+        <p
+          data-sal="slide-right"
+          data-sal-duration="1500"
+          data-sal-delay="300"
+          data-sal-easing="ease-out-bounce"
+        >
+          I'm interested in a web developer position and freelance opportunities
+          <!-- - especially ambitous projects -->
+        </p>
+      </div>
+      <div
+        class="links"
+        data-sal="slide-right"
+        data-sal-duration="1500"
+        data-sal-delay="500"
+        data-sal-easing="ease-out-bounce"
+      >
+        <!-- Email -->
+        <div class="links-icon">
+          <a href="mailto:klementoboh@yahoo.com" target="_blank"
+            ><i class="fas fa-at"></i
+          ></a>
+        </div>
+        <!-- Linkedin -->
+        <div class="links-icon">
+          <a
+            href="https://www.linkedin.com/in/clement-oboh-0b607a81"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Telegram -->
+        <div class="links-icon">
+          <a href="https://t.me/kamarri" target="_blank"
+            ><i class="fab fa-telegram-plane"></i
+          ></a>
+        </div>
+
+        <!-- GitHub -->
+        <div class="links-icon">
+          <a href="https://github.com/kamari-1" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+
+        <!-- FreeCodeCamp -->
+        <div class="links-icon">
+          <a
+            href="https://www.freecodecamp.org/kamari"
+            target="_blank"
+            id="profile-link"
+            ><i class="fab fa-free-code-camp"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      data-sal="slide-up"
+      data-sal-duration="2000"
+      data-sal-delay="700"
+      data-sal-easing="ease-out-bounce"
+    >
+      All rights reserved. Clement Oboh <span>&copy2021</span>
+    </footer>
+
+    <!-- ----- SCRIPTS ----- -->
+    <script src="index.js"></script>
+    <script src="./node_modules/sal.js/dist/sal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
     <script>
-      window.jQuery ||
-        document.write(
-          '<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'
-        );
-    </script>
-
-    <script src="js/vendor/bootstrap.min.js"></script>
-
-    <script src="js/datepicker.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function () {
-        // navigation click actions
-        $(".scroll-link").on("click", function (event) {
-          event.preventDefault();
-          var sectionID = $(this).attr("data-id");
-          scrollToID("#" + sectionID, 750);
-        });
-        // scroll to top action
-        $(".scroll-top").on("click", function (event) {
-          event.preventDefault();
-          $("html, body").animate({ scrollTop: 0 }, "slow");
-        });
-        // mobile nav toggle
-        $("#nav-toggle").on("click", function (event) {
-          event.preventDefault();
-          $("#main-nav").toggleClass("open");
-        });
+      sal();
+      particlesJS.load("particles-js", "assets/particles.json", function () {
+        console.log("callback - particles.js config loaded");
       });
-      // scroll function
-      function scrollToID(id, speed) {
-        var offSet = 0;
-        var targetOffset = $(id).offset().top - offSet;
-        var mainNav = $("#main-nav");
-        $("html,body").animate({ scrollTop: targetOffset }, speed);
-        if (mainNav.hasClass("open")) {
-          mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-          mainNav.removeClass("open");
-        }
-      }
-      if (typeof console === "undefined") {
-        console = {
-          log: function () {},
-        };
-      }
     </script>
   </body>
 </html>
