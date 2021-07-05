@@ -229,7 +229,13 @@ nav .menu-close {
   line-height: 1.4;
 }
 
-.projects_cards .card .card-overlay-desc .tech-used {
+.projects_cards .card .card-overlay-desc .built-with p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.projects_cards .card .card-overlay-desc .built-with .tech-used {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,10 +244,10 @@ nav .menu-close {
           justify-content: space-evenly;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  margin-top: 0.7rem;
+  margin-top: 0.2rem;
 }
 
-.projects_cards .card .card-overlay-desc .tech-used h4 {
+.projects_cards .card .card-overlay-desc .built-with .tech-used h4 {
   font-size: 2rem;
 }
 
@@ -498,6 +504,7 @@ nav .menu-close {
 .page-title {
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  text-decoration: underline;
 }
 
 footer {

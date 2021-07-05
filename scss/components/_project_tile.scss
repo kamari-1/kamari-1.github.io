@@ -89,14 +89,22 @@
           line-height: 1.4;
         }
 
-        .tech-used {
-          display: flex;
-          justify-content: space-evenly;
-          transition: 0.2s;
-          margin-top: 0.7rem;
+        .built-with {
+          p {
+            font-size: 1rem;
+            font-weight: 700;
+            // text-align: left;
+            margin-top: 1rem;
+          }
+          .tech-used {
+            display: flex;
+            justify-content: space-evenly;
+            transition: 0.2s;
+            margin-top: 0.2rem;
 
-          h4 {
-            font-size: 2rem;
+            h4 {
+              font-size: 2rem;
+            }
           }
         }
       }
